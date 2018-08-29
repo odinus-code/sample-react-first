@@ -70,7 +70,9 @@ class App extends Component {
   }
 
   _callApi = () =>{
-    return fetch("http://localhost:3000/movies.json")
+	  //https://yts.am/api/v2/list_movies.json?sort_by=download_count
+    //return fetch("http://localhost:3000/movies.json")
+	return fetch("https://yts.am/api/v2/list_movies.json?sort_by=download_count")
     //..fetch("https://jsonplaceholder.typicode.com/posts/1")
     .then( potato => potato.json() )
     .then(json => json.data.movies)
